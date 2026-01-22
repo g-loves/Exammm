@@ -3,19 +3,19 @@ const API_BASE = 'http://localhost:5000/api';
 let currentUserId = null;
 let currentUserName = null;
 
-// Switch to Registration
+
 function switchToRegister() {
   document.getElementById('loginPage').classList.add('hidden');
   document.getElementById('registerPage').classList.remove('hidden');
 }
 
-// Switch to Login
+
 function switchToLogin() {
   document.getElementById('registerPage').classList.add('hidden');
   document.getElementById('loginPage').classList.remove('hidden');
 }
 
-// Register
+
 document.getElementById('registerBtn').addEventListener('click', async () => {
   const name = document.getElementById('registerName').value;
   const password = document.getElementById('registerPassword').value;
@@ -46,7 +46,7 @@ document.getElementById('registerBtn').addEventListener('click', async () => {
   }
 });
 
-// Login
+
 document.getElementById('loginBtn').addEventListener('click', async () => {
   const name = document.getElementById('loginName').value;
   const password = document.getElementById('loginPassword').value;
@@ -83,7 +83,7 @@ document.getElementById('loginBtn').addEventListener('click', async () => {
   }
 });
 
-// Logout
+
 document.getElementById('logoutBtn').addEventListener('click', () => {
   currentUserId = null;
   currentUserName = null;
@@ -96,13 +96,13 @@ document.getElementById('logoutBtn').addEventListener('click', () => {
   document.getElementById('registerPage').classList.add('hidden');
 });
 
-// Show App
+
 function showApp() {
   document.getElementById('authSection').classList.add('hidden');
   document.getElementById('appSection').classList.remove('hidden');
 }
 
-// Add Task
+
 document.getElementById('addTaskBtn').addEventListener('click', async () => {
   const title = document.getElementById('taskInput').value;
 
@@ -127,7 +127,7 @@ document.getElementById('addTaskBtn').addEventListener('click', async () => {
   }
 });
 
-// Load Tasks
+
 async function loadTasks() {
   try {
     const response = await fetch(`${API_BASE}/tasks/${currentUserId}`);
@@ -151,7 +151,7 @@ async function loadTasks() {
   }
 }
 
-// Create Task Element
+
 function createTaskElement(task, isCompleted) {
   const div = document.createElement('div');
   div.className = 'flex items-center justify-between bg-gray-50 p-3 rounded border-2 border-gray-200';

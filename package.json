@@ -1,0 +1,13 @@
+{
+  "name": "task-app",
+  "version": "1.0.0",
+  "description": "Task management app with user auth",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npx http-server -p 8080 -o"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

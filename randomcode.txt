@@ -1,1 +1,14 @@
-npm run server
+npm run server 
+
+client - 
+app.js 
+index.html
+
+server :
+models 
+ - Task.js
+ - User.js
+Routes :
+auth.js
+tasks.js
+
